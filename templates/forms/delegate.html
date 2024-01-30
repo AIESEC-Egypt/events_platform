@@ -1,0 +1,68 @@
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/css/form.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <section class="form-container">
+        <form enctype="multipart/form-data" method="post" novalidate>
+            {% csrf_token %}
+            <div class="form">
+                <p class="form-item form-item1">
+                    <label for="id_name">Name:</label>
+                    {% render_field form.name %}
+                </p>
+                <p class="form-item form-item1">
+                    <label for="id_gender">Gender:</label>
+                    {% render_field form.gender %}
+                </p>
+                <p class="form-item form-item2">
+                    <label for="id_phone_number">Phone number:</label>
+                    {% render_field form.phone_number %}
+                </p>
+                <p class="form-item form-item2">
+                    <label for="id_email">Email:</label>
+                    {% render_field form.email %}
+                </p>
+                <p class="form-item form-item3">
+                    <label for="id_cv">Cv:</label>
+                    {% render_field form.cv %}
+                </p>
+                <p class="form-item form-item3">
+                    <label for="id_indemnity_form">Indemnity form:</label>
+                    {% render_field form.indemnity_form %}
+                </p>
+                <p class="form-item form-item4">
+                    <label for="id_id_front">Id front:</label>
+                    {% render_field form.id_front %}
+                </p>
+                <p class="form-item form-item4">
+                    <label for="id_id_back">Id back:</label>
+                    {% render_field form.id_back %}
+                </p>
+                <p class="form-item form-item5">
+                    <label for="id_lc">LC:</label>
+                    {% render_field form.lc %}
+                </p>
+                <p class="form-item form-item5">
+                    <label for="id_role">Role:</label>
+                    {% render_field form.role %}
+                </p>
+                <p class="form-item form-item6">
+                    <label for="id_function">Function:</label>
+                    {% render_field form.function %}
+                </p>
+                <div class="btn-container">
+                    <input id="submit" class="btn btn-glow form-btn" type="submit" name="submit" value="Submit"/>
+                </div>
+            </div>
+        </form>
+    </section>
+</body>
+</html>

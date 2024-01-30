@@ -1,0 +1,218 @@
+html {
+    /* background: #037ef3; */
+  
+    font-family: sans-serif;
+    background-image: url('../images/AIESEC-Human-Blue.png');
+    background-repeat:repeat;
+    background-size: 10%;
+  }
+  
+  *, ::after, ::before {
+    box-sizing: border-box;
+  }
+  
+  @keyframes slide-up2 {
+      0% {
+          transform: translateY(.5em);
+          opacity: 0;
+      }
+      100%{
+          transform: translateY(0);
+          opacity: 1;
+      }
+  }
+  
+  @keyframes glow-load {
+      0% {
+          box-shadow: none;
+      }
+      100%{
+          box-shadow:
+              0px 0px 50px #000000b7;
+      }
+  }
+  
+  @keyframes continuous-glow {
+      0% {
+      box-shadow: 0 0 5px #037ff38c, inset 0 0 5px #037ff38c, 0 2px 0 #d1d1d1;
+      }	
+      100% {
+      box-shadow: 0 0 20px #037ff38c, inset 0 0 10px #037ff38c, 0 2px 0 #d4d4d4;
+      }
+  }
+  
+  @keyframes blur-load {
+      0% {
+          opacity: 0;
+          filter:blur(0.2em);
+      }
+      100%{
+          opacity: 1;
+          filter:blur(0);
+      }
+  }
+  
+  .form-container {
+    margin: auto;
+    width: 90%;
+  }
+  
+  .form-item,
+  .textarea-div {
+      opacity: 0;
+  }
+  
+  .form-item1 {
+      animation: .2s cubic-bezier(0.47, 0, 0.745, 0.715) .3s 1 slide-up2 ;
+    animation-fill-mode: forwards;
+  }
+  
+  .form-item2 {
+      animation: .2s cubic-bezier(0.47, 0, 0.745, 0.715) .4s 1 slide-up2 ;
+    animation-fill-mode: forwards;
+  }
+  
+  .form-item3 {
+      animation: .2s cubic-bezier(0.47, 0, 0.745, 0.715) .5s 1 slide-up2 ;
+    animation-fill-mode: forwards;
+  }
+  
+  .form-item4 {
+      animation: .2s cubic-bezier(0.47, 0, 0.745, 0.715) .6s 1 slide-up2 ;
+    animation-fill-mode: forwards;
+  }
+  .form-item5 {
+      animation: .2s cubic-bezier(0.47, 0, 0.745, 0.715) .7s 1 slide-up2 ;
+    animation-fill-mode: forwards;
+  }
+  .form-item6 {
+      animation: .2s cubic-bezier(0.47, 0, 0.745, 0.715) .8s 1 slide-up2 ;
+    animation-fill-mode: forwards;
+  }
+  
+  
+  
+  form {
+      background-color: #037ef3;
+      border-radius: 1.25em;
+      padding: 1.5em;
+      animation: 1s cubic-bezier(0.47, 0, 0.745, 0.715) .7s 1 glow-load;
+      animation-fill-mode: forwards;
+      justify-content: center;
+  }
+  
+  form label {
+      color: #ffffff;
+  }
+  
+  option, select, input, .textarea-div textarea {
+    background: #ffffff;
+    color: rgb(26, 26, 26);
+  }
+  
+  .form-header {
+      text-align: center;
+      font-size: 28px;
+      padding: 0;
+      margin-bottom: 1.25em;
+      color: #ffffff	;
+      border-radius: 1.25em;
+      padding: 10px;
+      background-color: #037ef3;
+      animation: 1s cubic-bezier(0.47, 0, 0.745, 0.715) .7s 1 glow-load;
+      animation-fill-mode: forwards;
+  }
+  
+  label {
+      display: block;
+      margin-bottom: 0.35em;
+      margin-top: 0.35em;
+  }
+  
+  input:not(.btn), select {
+      padding: 0.625em 1em;
+      width: 100%;
+      outline: 0;
+      margin-bottom: 1.25em;
+      border-radius: 1.25em;
+      border: 0;
+  }
+  
+  .textarea-div {
+      width: 100%;
+  }
+  
+  textarea {
+      padding: 10px;
+      width: 100%;
+      outline: 0;
+      margin-bottom: 20px;
+      border-radius: 20px;
+      border: 0;
+      font-size: 14px;
+      height: 100px;
+  }
+  
+  .btn-container {
+    margin: auto;
+    padding-bottom: 1em;
+  }
+  
+  .form-btn { 
+      background: #ffc845 ;
+      border: none ;
+      margin-top: 1em ;
+      font-size: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      display: table;
+      padding: .5em;
+      }
+  
+  .btn-glow {
+      animation: .5s ease-out 0s 1 blur-load;
+      border-radius: 2em ;
+      /* color: rgb(110, 93, 93) ; */
+      transition:.4s ;
+  }
+  
+  .btn-glow:hover {
+      box-shadow: 0px 0px 10px #037ef3;
+  }
+  
+  .form-btn:hover { 
+      background: #ffffff ;
+  }
+  
+  .form-container input:focus,
+  .form-container select:focus,
+  .form-container textarea:focus  {
+      animation: continuous-glow 800ms ease-out infinite alternate;
+      box-shadow: 0 0 5px #037ef3, inset 0 0 5px #037ef3, 0 2px 0 #000;
+      color: rgb(26, 26, 26);
+  }
+  
+  @media only screen and (min-width: 35.8em) {
+      .form {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+      }
+      
+      .form-item {
+          width: 45%;
+      }
+  
+      .form-container {
+          padding: 5em 0;
+          width: 80%;
+    }
+  }
+  
+  @media only screen and (min-width: 60.625em) {
+    .form-container {
+          padding: 8em 0;
+      width: 70%;
+    }
+  }
+  
